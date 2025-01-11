@@ -1,0 +1,20 @@
+name: Weekly Streamlit Task
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Una vez a la semana, domingo a medianoche
+jobs:
+  run-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run Streamlit Task
+        run: |
+          streamlit run app.py
