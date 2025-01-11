@@ -100,10 +100,9 @@ def main():
     st.subheader("Serie de tiempo filtrada por región y rango de semanas")
 
     # Ruta al archivo
-    #file_path = "/Users/erickgarciaviveros/Library/CloudStorage/OneDrive-Personal/a_PUC_/MCD_b10_Actividad de Graduación III/Streamlit/UR/df_semanal_regional.xlsx"
-    file_path = "/Users/erickgarciaviveros/Library/CloudStorage/OneDrive-Bibliotecascompartidas:UniversidadCatólicadeChile/José Maximiliano Nieto Alfaro - AFG-I/Streamlit/df_semanal_regional.xlsx"
-
+    file_path = os.path.join(os.getcwd(), 'df_semanal_regional.xlsx')
     df = load_data(file_path)
+
 
     # Filtros interactivos
     st.sidebar.header("Filtros")
