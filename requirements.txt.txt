@@ -1,5 +1,0 @@
-streamlit
-pandas
-tensorflow
-scikit-learn
-plotly
